@@ -19,7 +19,7 @@ function Header({
           history.goBack();
         }}
         // rightContent={[
-        //   <Icon key="0" type="search" style={{marginRight: '16px'}} />,
+        //   <Icon key="0" type="search" />,
         //   <Icon key="1" type="ellipsis" />,
         // ]}
       >{title}</NavBar>
