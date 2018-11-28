@@ -25,21 +25,23 @@ function Footer({
       >
        {tabData.map((item, index) => {
          let {title,icon,selectedIcon,path} = item;
+         let iconStyle = {
+          width: '22px',
+          height: '22px',
+          background: 'url('+icon+') center center /  21px 21px no-repeat' }
+          let selectIconStyle ={
+            width: '22px',
+            height: '22px',
+            background: 'url('+selectedIcon+') center center /  21px 21px no-repeat' }
          return <TabBar.Item
                  title={title}
                  key={index}
                  icon={
-                   <div style={{
-                     width: '22px',
-                     height: '22px',
-                     background: 'url('+icon+') center center /  21px 21px no-repeat' }}
+                   <div style={iconStyle}
                    />
                  }
                  selectedIcon={
-                   <div style={{
-                     width: '22px',
-                     height: '22px',
-                     background: 'url('+selectedIcon+') center center /  21px 21px no-repeat' }}
+                   <div style={selectIconStyle}
                    />
                  }
                  selected={location.pathname === path}
