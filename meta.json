@@ -4,7 +4,7 @@
       "type": "string",
       "required": true,
       "label": "Project name",
-      "default": "bs-umi-dva-antd-pc-template"
+      "default": "bs-umi-dva-antd-mobile-template"
     },
     "description": {
       "type": "string",
@@ -20,7 +20,15 @@
       "type": "string",
       "label": "License",
       "default": "MIT"
+    },
+    "modules": {
+      "type": "confirm",
+      "label": "你的项目中需要mudules吗",
+      "default": true
     }
+  },
+  "filters": {
+    "modules/*": "modules"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
