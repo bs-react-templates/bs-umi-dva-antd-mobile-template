@@ -1,43 +1,12 @@
 {
   "prompts": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Project name",
-      "default": "bs-umi-dva-antd-mobile-template"
-    },
-    "description": {
-      "type": "string",
-      "required": true,
-      "label": "Project description",
-      "default": "bs-umi-dva-antd-mobile-template"
-    },
-    "author": {
-      "type": "string",
-      "label": "Author"
-    },
-    "license": {
-      "type": "string",
-      "label": "License",
-      "default": "MIT"
-    },
-    "usemodules": {
-      "type": "confirm",
-      "label": "add modules?",
-      "default": false
-    },
-    "template": {
-      "when": "usemodules",
+    "type":{
       "type": "list",
-      "message": "Pick a lint config",
-      "choices": [
-        "aa",
-        "bb",
-        "cc"
-      ]
+      "message": "Please select project type",
+      "choices": ["scaffolds","modules"]
     },
     "modules": {
-      "when": "usemodules",
+      "when": "type==='modules'",
       "type": "checkbox",
       "label": "modules",
       "message":"Please select modules",
@@ -59,14 +28,35 @@
           "short": "cc"
         }
       ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Project name",
+      "default": "bs-umi-dva-antd-mobile-template"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "label": "Project description",
+      "default": "bs-umi-dva-antd-mobile-template"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author"
+    },
+    "license": {
+      "type": "string",
+      "label": "License",
+      "default": "MIT"
     }
   },
   "filters": {
-    "scaffolds/**/*": "!usemodules",
-    "scaffolds/modules/**/*": "usemodules",
-    "scaffolds/modules/aa/**/*": "usemodules && template==='aa'",
-    "scaffolds/modules/bb/**/*": "usemodules && template==='bb'",
-    "scaffolds/modules/cc/**/*": "usemodules && template==='cc'"
+    "scaffolds/**/*": "type==='scaffolds'",
+    "modules/**/*": "type==='modules'",
+    "modules/aa/**/*": "type==='modules' && template==='aa'",
+    "modules/bb/**/*": "type==='modules' && template==='bb'",
+    "modules/cc/**/*": "type==='modules' && template==='cc'"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
