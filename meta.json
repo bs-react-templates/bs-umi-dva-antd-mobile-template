@@ -54,9 +54,9 @@
   "filters": {
     "scaffolds/**/*": "type==='scaffolds'",
     "modules/**/*": "type==='modules'",
-    "modules/aa/**/*": "type==='modules' && template==='aa'",
-    "modules/bb/**/*": "type==='modules' && template==='bb'",
-    "modules/cc/**/*": "type==='modules' && template==='cc'"
+    "modules/aa/**/*": "type==='modules' && modules.aa",
+    "modules/bb/**/*": "type==='modules' && modules.bb",
+    "modules/cc/**/*": "type==='modules' && modules.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
