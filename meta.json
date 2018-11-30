@@ -26,15 +26,27 @@
       "label": "template",
       "default": "true"
     },
-    "modules": {
+    "usemodules": {
       "type": "confirm",
-      "label": "你的项目中需要mudules吗",
-      "default": true
+      "label": "add modules?",
+      "default": false
+    },
+    "modules": {
+      "when": "usemodules",
+      "type": "list",
+      "message": "select modules",
+      "choices": [
+        "aa",
+        "bb",
+        "cc"
+      ]
     }
   },
   "filters": {
-    "frame/react/**/*": "template",
-    "frame/react/modules/**/*": "modules"
+    "modules/**/*": "usemodules",
+    "modules/aa/**/*": "modules.aa",
+    "modules/bb/**/*": "modules.bb",
+    "modules/cc/**/*": "modules.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
