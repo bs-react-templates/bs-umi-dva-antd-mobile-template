@@ -52,6 +52,7 @@
     }
   },
   "filters": {
+    "name/**/*": "name==='bin'",
     "scaffolds/**/*": "type==='scaffolds'",
     "modules/**/*": "type==='modules'",
     "modules/aa/**/*": "type==='modules' && modules.aa",
