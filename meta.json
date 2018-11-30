@@ -1,10 +1,5 @@
 {
   "prompts": {
-    "type":{
-      "type": "list",
-      "message": "Please select project type",
-      "choices": []
-    },
     "modules": {
       "when": "type==='modules'",
       "type": "checkbox",
