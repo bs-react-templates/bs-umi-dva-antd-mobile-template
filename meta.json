@@ -26,6 +26,16 @@
       "label": "add modules?",
       "default": false
     },
+    "template": {
+      "when": "usemodules",
+      "type": "list",
+      "message": "Pick a lint config",
+      "choices": [
+        "aa",
+        "bb",
+        "cc"
+      ]
+    },
     "modules": {
       "when": "usemodules",
       "type": "checkbox",
@@ -53,9 +63,9 @@
   },
   "filters": {
     "modules/**/*": "usemodules",
-    "modules/aa/**/*": "usemodules && modules.aa",
-    "modules/bb/**/*": "usemodules && modules.bb",
-    "modules/cc/**/*": "usemodules && modules.cc"
+    "modules/aa/**/*": "usemodules && template.aa",
+    "modules/bb/**/*": "usemodules && template.bb",
+    "modules/cc/**/*": "usemodules && template.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
