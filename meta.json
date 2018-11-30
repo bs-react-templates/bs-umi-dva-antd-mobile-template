@@ -62,7 +62,7 @@
     }
   },
   "filters": {
-    "!modules/**/*": "usemodules",
+    "scaffolds/**/*": "!usemodules",
     "modules/**/*": "usemodules",
     "modules/aa/**/*": "usemodules && template==='aa'",
     "modules/bb/**/*": "usemodules && template==='bb'",
