@@ -30,7 +30,7 @@
       "when": "usemodules",
       "type": "checkbox",
       "label": "modules",
-      "message":"Please select libaries which you will use in this material source.",
+      "message":"Please select modules",
       "required": true,
       "choices": [
         {
