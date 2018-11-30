@@ -36,9 +36,21 @@
       "type": "list",
       "message": "select modules",
       "choices": [
-        "aa",
-        "bb",
-        "cc"
+        {
+          "name": "aa",
+          "value": "a",
+          "short": "aa"
+        },
+        {
+          "name": "bb",
+          "value": "bb",
+          "short": "bb"
+        },
+        {
+          "name": "cc",
+          "value": "cc",
+          "short": "cc"
+        }
       ]
     }
   },
