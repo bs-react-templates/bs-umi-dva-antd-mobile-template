@@ -63,9 +63,9 @@
   },
   "filters": {
     "modules/**/*": "usemodules",
-    "modules/aa/**/*": "usemodules && template.aa",
-    "modules/bb/**/*": "usemodules && template.bb",
-    "modules/cc/**/*": "usemodules && template.cc"
+    "modules/aa/**/*": "usemodules && template==='aa'",
+    "modules/bb/**/*": "usemodules && template==='bb'",
+    "modules/cc/**/*": "usemodules && template==='cc'"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
