@@ -1,29 +1,7 @@
 {
   "prompts": {
-    "modules": {
-      "when": "type==='modules'",
-      "type": "checkbox",
-      "label": "modules",
-      "message":"Please select modules",
-      "required": true,
-      "choices": [
-        {
-          "name": "aa",
-          "value": "aa",
-          "short": "aa"
-        },
-        {
-          "name": "bb",
-          "value": "bb",
-          "short": "bb"
-        },
-        {
-          "name": "cc",
-          "value": "cc",
-          "short": "cc"
-        }
-      ]
-    },
+    "type":{},
+    "modules": {},
     "name": {
       "type": "string",
       "required": true,
