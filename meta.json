@@ -1,7 +1,5 @@
 {
   "prompts": {
-    "type":{},
-    "modules": {},
     "name": {
       "type": "string",
       "required": true,
