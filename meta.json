@@ -31,29 +31,30 @@
       "label": "add modules?",
       "default": false
     },
-    "modules": {
-      "when": "usemodules",
-      "type": "list",
-      "label": "modules",
-      "message": "select modules",
-      "choices": [
-        {
-          "name": "aa",
-          "value": "a",
-          "short": "aa"
-        },
-        {
-          "name": "bb",
-          "value": "bb",
-          "short": "bb"
-        },
-        {
-          "name": "cc",
-          "value": "cc",
-          "short": "cc"
-        }
-      ]
-    }
+  "modules": {
+    "when": "usemodules",
+    "type": "checkbox",
+    "label": "modules",
+    "message":
+    "Please select libaries which you will use in this material source.",
+    "required": true,
+    "choices": [
+      {
+        "name": "aa",
+        "value": "a",
+        "short": "aa"
+      },
+      {
+        "name": "bb",
+        "value": "bb",
+        "short": "bb"
+      },
+      {
+        "name": "cc",
+        "value": "cc",
+        "short": "cc"
+      }
+    ]
   },
   "filters": {
     "modules/**/*": "usemodules",
