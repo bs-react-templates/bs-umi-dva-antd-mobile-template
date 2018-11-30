@@ -21,11 +21,6 @@
       "label": "License",
       "default": "MIT"
     },
-    "template": {
-      "type": "confirm",
-      "label": "template",
-      "default": "true"
-    },
     "usemodules": {
       "type": "confirm",
       "label": "add modules?",
@@ -40,7 +35,7 @@
       "choices": [
         {
           "name": "aa",
-          "value": "a",
+          "value": "aa",
           "short": "aa"
         },
         {
@@ -58,9 +53,9 @@
   },
   "filters": {
     "modules/**/*": "usemodules",
-    "modules/aa/**/*": "modules.aa",
-    "modules/bb/**/*": "modules.bb",
-    "modules/cc/**/*": "modules.cc"
+    "modules/aa/**/*": "usemodules && modules.aa",
+    "modules/bb/**/*": "usemodules && modules.bb",
+    "modules/cc/**/*": "usemodules && modules.cc"
   },
   "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}"
 }
