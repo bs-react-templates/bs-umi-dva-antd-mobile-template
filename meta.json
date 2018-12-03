@@ -1,6 +1,6 @@
 {
   "prompts": {
-    "type":{},
+    "type":{"type":"list","message":"Please select project type","choices":["scaffolds","modules"]},
     "modules": {},
     "name": {
       "type": "string",
