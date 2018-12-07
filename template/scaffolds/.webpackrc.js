@@ -24,8 +24,5 @@ export default {
     models: resolve(__dirname, "./src/models"),
     config:resolve(__dirname, "./src/config"),
     baseModel:resolve(__dirname, "./src/baseModel"),
-  },
-  urlLoaderExcludes: [
-    /\.svg$/,
-  ]
+  }
 }
